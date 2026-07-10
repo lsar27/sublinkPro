@@ -42,11 +42,11 @@ jobs:
 
       - name: Build frontend for Pages
         env:
-          SUBLINK_CAPTCHA_MODE:
+          CAPTCHA_MODE:
             1
         run: |
           cd webs
-          SUBLINK_CAPTCHA_MODE=1 VITE_APP_BASE_NAME="/sublinkPro/" yarn run build
+          CAPTCHA_MODE=1 VITE_APP_BASE_NAME="/sublinkPro/" yarn run build
           cp dist/index.html dist/404.html
 
       - name: Upload Pages artifact
