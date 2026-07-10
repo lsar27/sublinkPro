@@ -41,6 +41,9 @@ jobs:
           yarn install --immutable
 
       - name: Build frontend for Pages
+        env:
+          SUBLINK_CAPTCHA_MODE:
+            1
         run: |
           cd webs
           VITE_APP_BASE_NAME="/sublinkPro/" yarn run build
